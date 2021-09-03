@@ -1,0 +1,21 @@
+{
+  "name": "vue3-tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.16.4",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^3.0.0",
+    "@vue/cli-service": "~4.5.13",
+    "@vue/compiler-sfc": "^3.2.6",
+    "sass": "^1.39.0",
+    "sass-loader": "10",
+    "vue-cli-plugin-windicss": "~1.0.4"
+  }
+}
