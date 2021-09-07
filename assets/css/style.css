@@ -1,0 +1,17 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  background: url(./assets/img/headers.jpg) center center no-repeat;
+}
+.hot-tours {
+  background: url(./assets/img/hot-tours.jpg) center center no-repeat;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
