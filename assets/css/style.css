@@ -5,10 +5,16 @@
 }
 
 .header {
-  background: url(./assets/img/headers.jpg) center center no-repeat;
+  background: url(../img/headers.jpg) center center no-repeat;
 }
-.hot-tours {
-  background: url(./assets/img/hot-tours.jpg) center center no-repeat;
+.sale {
+  background: url(../img/hot-tours.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.chek {
+  background: url(../img/chek.png) top left no-repeat;
+  padding-left: 40px;
 }
 
 @tailwind base;

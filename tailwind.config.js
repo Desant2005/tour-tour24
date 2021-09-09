@@ -10,6 +10,10 @@ module.exports = {
     theme: {
         extend: {
             colors: colors,
+            colors: {
+                blue: colors.sky,
+                orange: colors.orange
+            },
             container: {
                 center: true,
             },

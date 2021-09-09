@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="svg/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind CSS Boilerplate</title>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-</head>
+    <script charset="utf-8" src="https://front.sletat.ru/modules/module6/latest/module.js" defer></script>
+    <script charset="utf-8" src="https://ui.sletat.ru/module-4.0/core.js"></script>
+  </head>
 
-<body class="min-h-screen">
-    <div class="bg-white h-16 shadow-md w-full top-0 z-10 fixed">
-      <div class="flex mx-auto h-16 px-2 w-[1366px]">
+  <body class="min-h-screen">
+    <div class="bg-white h-[115px] shadow-md w-full top-0 z-10">
+      <div class="flex mx-auto h-[115px] px-2 w-[1366px] justify-between">
         <div class="flex flex-col text-orange-500 text-2xl w-1/12 items-center justify-center">
-          <span class="iconify" data-icon="simple-icons:yourtraveldottv"></span>
-          <div>logo</div>
+          <a href="/">
+            <img class="w-3/4" src="./assets/img/logo.png" alt="Tour-tour24" />
+          </a>
         </div>
         <div class="flex w-2/12 justify-start items-center">
           <span class="cursor-pointer mr-4 text-blue-600 text-4xl iconify hover:text-blue-400" data-icon="entypo-social:vk-alternitive"></span>
           <span class="cursor-pointer mr-4 text-pink-500 text-4xl iconify hover:text-pink-400" data-icon="fa-brands:instagram-square"></span>
           <span class="cursor-pointer text-green-500 text-4xl iconify hover:text-green-400" data-icon="fa-brands:whatsapp-square"></span>
         </div>
-        <div class="flex w-m-4/12 justify-center items-center">
-          <h2 class="flex text-2xl items-center">
+        <div class="flex w-m-5/12 justify-center items-center flex-col">
+          <h2 class="flex text-2xl items-center mb-4">
             <span class="mr-2 text-green-600 iconify" data-icon="healthicons:call-centre"></span>
             <a class="pr-6 hover:text-orange-500" href="tel:+7777777777" target="_blank">+7777777777</a>
           </h2>
@@ -33,67 +34,211 @@
           </p>
         </div>
         <div class="flex w-5/12 justify-end items-center">
-          <a href="#hotTours" class="rounded-md flex bg-orange-500 shadow-md shadow text-white text-xl mr-2 py-2 px-3 transform transition delay-75 items-center hover:shadow-none active:translate-y-1">
-            <span class="mr-1 iconify" data-icon="bx:bxs-hot"></span>
-            <h3>Горящий тур</h3>
+          <a href="#hotTours" class="flex flex-col justify-center items-center group mr-4">
+            <img class="w-[60px]" src="./assets/img/fire.png" alt="Горящий тур" />
+            <h3 class="group-hover:text-orange-500 text-xl">Горящий тур</h3>
           </a>
-          <a href="#callBack" class="rounded-md flex bg-green-500 shadow-md shadow text-white mr-2 text-xl py-2 px-3 transform transition delay-75 items-center hover:shadow-none active:translate-y-1">
-            <span class="mr-1 iconify" data-icon="fluent:call-inbound-28-filled"></span>
-            <h3>Обратная связь</h3>
+          <a href="#callBack" class="flex flex-col justify-center items-center group mr-4">
+            <img class="w-[60px]" src="./assets/img/call.png" alt="Обратная связь" />
+            <h3 class="group-hover:text-green-500 text-xl">Обратная связь</h3>
           </a>
-          <a href="#TourSelection" class="rounded-md flex bg-blue-500 shadow-md shadow text-white text-xl py-2 px-3 transform transition delay-75 items-center hover:shadow-none active:translate-y-1">
-            <span class="mr-1 iconify" data-icon="fa-solid:search-location"></span>
-            <h3>Подбор тура</h3>
+          <a href="#TourSelection" class="flex flex-col justify-center items-center group">
+            <img class="w-[60px]" src="./assets/img/search.png" alt="Подбор тура" />
+            <h3 class="group-hover:text-blue-500 text-xl">Подбор тура</h3>
           </a>
         </div>
       </div>
     </div>
-    <header class="bg-cover h-[650px] mt-16 w-full header relative">
-        <div class="flex flex-col bg-blue-500 bg-opacity-25 top-0 right-0 bottom-0 left-0 absolute">
-            <div class="m-auto z-5">
-              <h1 class="font-bold shadow-white text-white text-shadow-md text-7xl">С нами отдыхать легко!</h1>
-            </div>
-            <div class="mx-auto mt-auto bg-dark-500 bg-opacity-35 w-full max-w-[850px]">
-              <div class=" relative z-10" data-sletat-module-id="dbf179e7-b2e9-439d-b15b-6e6771dd2bbf"></div>
-            </div>
+    <header class="bg-cover h-[650px] w-full header relative">
+      <div class="flex flex-col bg-blue-500 bg-opacity-25 top-0 right-0 bottom-0 left-0 absolute">
+        <div class="m-auto z-5">
+          <h1 class="font-bold shadow-white text-white text-shadow-md text-7xl">С нами отдыхать легко!</h1>
         </div>
+        <div class="mx-auto mt-auto bg-dark-500 bg-opacity-35 w-full max-w-[850px]">
+          <div class="relative z-10" data-sletat-module-id="dbf179e7-b2e9-439d-b15b-6e6771dd2bbf"></div>
+        </div>
+      </div>
     </header>
-    <section class="py-14 w-full ">
-        <div class="mx-auto w-[1366px]">
-            <h2 class="pb-6 flex justify-center uppercase font-bold text-2xl">Горящие туры</h2>
-            <script type="text/javascript" src="https://ui.sletat.ru/module-4.0/core.js" charset="utf-8"></script>
-            <script type="text/javascript">sletat.FrameHot.$create({
-            toursCount        : 10,
-            useCard           : false,
-            enabledCurrencies : ["RUB"]
-            });</script>
-            <span class="sletat-copyright">Идет загрузка модуля <a href="https://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
-        </div>
+    <section class="py-14 w-full">
+      <div class="mx-auto w-[1366px]">
+        <h2 class="pb-6 flex justify-center uppercase font-bold text-2xl">Горящие туры</h2>
+        <script type="text/javascript">
+          sletat.FrameHot.$create({
+            toursCount: 10,
+            useCard: false,
+            enabledCurrencies: ["RUB"],
+          });
+        </script>
+        <span class="sletat-copyright">Идет загрузка модуля <a href="https://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
+      </div>
     </section>
     <section>
-        <div class="mx-auto w-[1366px]">
-            <h2 class="pb-6 flex justify-center uppercase font-bold text-2xl">Горящие туры</h2>
-            <div class="flex flex-wrap justify-between mt-6">
-                <img class="m-6 w-2/12" src="assets/img/partner1.png" :alt="Summar">
-                <img class="m-6 w-2/12" src="assets/img/partner2.png" :alt="Anex Tour">
-                <img class="m-6 w-2/12" src="assets/img/partner3.png" :alt="Tui">
-                <img class="m-6 w-2/12" src="assets/img/partner4.png" :alt="Tez Tour">
-                <img class="m-6 w-2/12" src="assets/img/partner5.png" :alt="Трансаэро тур">
-                <img class="m-6 w-2/12" src="assets/img/partner6.png" :alt="Библио глобус">
-                <img class="m-6 w-2/12" src="assets/img/partner7.png" :alt="Русский экспресс">
-                <img class="m-6 w-2/12" src="assets/img/partner8.png" :alt="CoralTravel">
-                <img class="m-6 w-2/12" src="assets/img/partner9.png" :alt="Natalie Tours">
-                <img class="m-6 w-2/12" src="assets/img/partner10.png" :alt="Intourist">
-                <img class="m-6 w-2/12" src="assets/img/partner11.png" :alt="Санрайз тур">
-                <img class="m-6 w-2/12" src="assets/img/partner12.png" :alt="Pegas touristik">
-            </div>
-            <img class="w-full" src="assets/img/partner_p.png" alt="Синяя волна">
+      <div class="mx-auto w-[1366px]">
+        <h2 class="pb-6 flex justify-center uppercase font-bold text-2xl">Наши партнеры</h2>
+        <div class="flex flex-wrap justify-between mt-6">
+          <img class="m-6 w-2/12" src="assets/img/partner1.png" :alt="Summar" />
+          <img class="m-6 w-2/12" src="assets/img/partner2.png" :alt="Anex Tour" />
+          <img class="m-6 w-2/12" src="assets/img/partner3.png" :alt="Tui" />
+          <img class="m-6 w-2/12" src="assets/img/partner4.png" :alt="Tez Tour" />
+          <img class="m-6 w-2/12" src="assets/img/partner5.png" :alt="Трансаэро тур" />
+          <img class="m-6 w-2/12" src="assets/img/partner6.png" :alt="Библио глобус" />
+          <img class="m-6 w-2/12" src="assets/img/partner7.png" :alt="Русский экспресс" />
+          <img class="m-6 w-2/12" src="assets/img/partner8.png" :alt="CoralTravel" />
+          <img class="m-6 w-2/12" src="assets/img/partner9.png" :alt="Natalie Tours" />
+          <img class="m-6 w-2/12" src="assets/img/partner10.png" :alt="Intourist" />
+          <img class="m-6 w-2/12" src="assets/img/partner11.png" :alt="Санрайз тур" />
+          <img class="m-6 w-2/12" src="assets/img/partner12.png" :alt="Pegas touristik" />
         </div>
+      </div>
+      <img class="w-full" src="assets/img/partner_p.png" alt="Синяя волна" />
     </section>
-    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
-    <script charset="utf-8" src="https://front.sletat.ru/modules/module6/latest/module.js" defer></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  </body>
-<script type="module" src="./assets/js/main.js"></script>
+    <section>
+      <div class="mx-auto w-[1366px]">
+        <h2 class="pb-6 flex justify-center uppercase font-bold text-2xl mt-14">Популярные отели</h2>
+        <div class="mt-6">
+          <script type="text/javascript">
+            sletat.HotelShowcase.$create({
+              showCountries: [3, 5, 14, 12, 15, 56, 119, 124, 169, 125, 129, 179, 28],
+              enabledCurrencies: ["RUB"],
+            });
+          </script>
+          <span class="sletat-copyright">Идет загрузка модуля <a href="https://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
+        </div>
+      </div>
+    </section>
+    <section class="sale w-full bg-cover">
+      <div class="mx-auto w-[1366px] py-14">
+        <div class="flex w-full items-center">
+          <div class="w-7/12">
+            <div class="flex justify-center">
+              <h2 class="text-white bg-orange-500 uppercase border-2 border-white px-4 py-2 font-bold">Решили отдохнуть</h2>
+            </div>
+            <div class="text-center bg-blue-500 border-2 border-white p-6">
+              <p class="text-white text-xl">
+                Сертификат на тур, в размере 1000 рублей, всем кто оставит заявку!
+                <span class="font-bold block">Независимо от того, купите вы путевку или нет!</span>
+              </p>
+            </div>
+            <div class="bg-black bg-opacity-40 p-6">
+              <ul
+                x-data="{sale: [
+                'У нас честные цены, мы не накручиваем!',
+                'Наша скорость работы вас приятно удивит, оставьте заявку и убедитесь в этом сами!',
+                'Мы работаем с лучшими туроператорами: Tez-Tour, Pegas, Coral-travel, Библио-глобус, Anex-tour, Sunmar и другие',
+                'Офис около метро!',
+                'Индивидуальный подход к каждому туристу, ищем отели по сложным критериям!'
+                ]}"
+              >
+                <template x-for="item in sale">
+                  <li class="text-white chek text-xl" x-text="item"></li>
+                </template>
+              </ul>
+            </div>
+          </div>
+          <div class="w-5/12 bg-orange-500 border-2 border-white ml-10">
+            <div class="bg-blue-500 py-6 flex flex-col items-center text-white">
+              <h2 class="uppercase font-bold">Подобрать тур</h2>
+              <span>И получить сертификат на 1000 рублей</span>
+            </div>
+            <form action="mail5.php" method="post" class="p-4 flex flex-col w-full">
+              <input class="mb-2 rounded-md p-2 outline-none border hover:border-blue-500 focus:border-blue-500" type="text" name="name" placeholder="Ваше имя" id="name" required />
+              <input class="mb-2 rounded-md p-2 outline-none border hover:border-blue-500 focus:border-blue-500" type="tel" name="phone" placeholder="Телефон" id="tel" required />
+              <textarea
+                class="rounded-md p-2 outline-none border hover:border-blue-500 focus:border-blue-500"
+                name="message"
+                id="message"
+                cols="30"
+                rows="7"
+                placeholder="Пожелание по туру"
+              ></textarea>
+              <div x-data="{planets: '', disabled: false }" class="flex flex-col">
+                <label class="py-2 text-white text-lg" for="chek">Введите название планеты на который вы живете!</label>
+                <div class="flex items-center">
+                  <input
+                    x-model="planets"
+                    x-init="$watch('planets', value => value.toLocaleLowerCase() === 'земля' ? disabled = true : disabled = false)"
+                    id="chek"
+                    class="mb-2 w-1/4 rounded-md p-2 outline-none border hover:border-blue-500 focus:border-blue-500"
+                    type="text"
+                    placeholder="Марс"
+                  />
+                  <p
+                    x-show="planets.length != 0"
+                    class="text-white rounded-md h-[fit-content] px-2 ml-2"
+                    x-text="disabled ? 'верно' : 'не правильно'"
+                    x-bind:class="disabled ? 'bg-green-500' : 'bg-red-500'"
+                  ></p>
+                </div>
+                <button
+                  type="submit"
+                  x-bind:disabled="!disabled"
+                  x-bind:class="disabled ? '' : 'bg-gray-500 cursor-not-allowed'"
+                  class="bg-green-500 rounded-md inline-flex w-[fit-content] py-3 px-5 text-white"
+                >
+                  Отправить заявку
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="mx-auto w-[1900px]">
+        <div style="overflow: hidden; display: block; position: relative; top: 0; left: 0; width: 100%; height: 88vh; min-width: 500px; min-height: 350px">
+          <script type="text/javascript">
+            sletat.Slider.$create({
+              city: 832,
+              useCard: false,
+              enabledCurrencies: ["RUB"],
+            });
+          </script>
+          <span class="sletat-copyright">Идет загрузка модуля <a href="https://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bg-[#1c1d20] h-[115px] w-full">
+        <div class="flex mx-auto h-[115px] px-2 w-[1366px] justify-between">
+          <div class="flex flex-col text-orange-500 text-2xl w-1/12 items-center justify-center">
+            <a href="/">
+              <img class="w-3/4" src="./assets/img/logo.png" alt="Tour-tour24" />
+            </a>
+          </div>
+          <div class="flex w-2/12 justify-start items-center">
+            <span class="cursor-pointer mr-4 text-blue-600 text-4xl iconify hover:text-blue-400" data-icon="entypo-social:vk-alternitive"></span>
+            <span class="cursor-pointer mr-4 text-pink-500 text-4xl iconify hover:text-pink-400" data-icon="fa-brands:instagram-square"></span>
+            <span class="cursor-pointer text-green-500 text-4xl iconify hover:text-green-400" data-icon="fa-brands:whatsapp-square"></span>
+          </div>
+          <div class="flex w-m-5/12 justify-center items-center flex-col">
+            <h2 class="flex text-2xl items-center mb-4">
+              <span class="mr-2 text-green-600 iconify" data-icon="healthicons:call-centre"></span>
+              <a class="pr-6 hover:text-orange-500 text-white" href="tel:+7777777777" target="_blank">+7777777777</a>
+            </h2>
+            <p class="flex text-2xl items-center">
+              <span class="mr-2 text-blue-600 iconify" data-icon="fluent:mail-24-filled"></span>
+              <a class="pr-6 hover:text-orange-500 text-white" href="mailto:mmm@mail.ru">mmm@mail.ru</a>
+            </p>
+          </div>
+          <div class="flex w-5/12 justify-end items-center">
+            <a href="#hotTours" class="flex flex-col justify-center items-center group mr-4">
+              <img class="w-[60px]" src="./assets/img/fire.png" alt="Горящий тур" />
+              <h3 class="group-hover:text-orange-500 text-xl text-white">Горящий тур</h3>
+            </a>
+            <a href="#callBack" class="flex flex-col justify-center items-center group mr-4">
+              <img class="w-[60px]" src="./assets/img/call.png" alt="Обратная связь" />
+              <h3 class="group-hover:text-green-500 text-xl text-white">Обратная связь</h3>
+            </a>
+            <a href="#TourSelection" class="flex flex-col justify-center items-center group">
+              <img class="w-[60px]" src="./assets/img/search.png" alt="Подбор тура" />
+              <h3 class="group-hover:text-blue-500 text-xl text-white">Подбор тура</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+  </body>
+  <script type="module" src="./assets/js/main.js"></script>
 </html>
