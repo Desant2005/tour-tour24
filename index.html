@@ -11,7 +11,7 @@
     <script charset="utf-8" src="https://ui.sletat.ru/module-4.0/core.js"></script>
   </head>
 
-  <body class="min-h-screen mx-auto max-w-[1920px]">
+  <body id="body" class="min-h-screen mx-auto max-w-[1920px]">
     <div class="bg-white p-4 shadow-md w-full top-0 z-10">
       <div class="flex flex-col sm:flex-row sm:flex-wrap mx-auto px-2 max-w-[1366px] justify-between">
         <div class="flex text-orange-500 text-2xl sm:w-1/2 md:w-3/12 items-center justify-between">
@@ -34,45 +34,16 @@
             <a class="hover:text-orange-500" href="mailto:mmm@mail.ru">mmm@mail.ru</a>
           </p>
         </div>
-        <div x-data="{ modalCallback: false }" class="flex sm:w-full md:w-5/12 justify-center md:justify-end items-center md:pr-4 text-center">
+        <div class="flex sm:w-full md:w-5/12 justify-center md:justify-end items-center md:pr-4 text-center">
           <a href="#hotTours" class="flex flex-col justify-center items-center group mr-4">
             <img class="w-[50px] md:w-[60px]" src="./assets/img/fire.png" alt="Горящий тур" />
             <h3 class="group-hover:text-orange-500 text-xl">Горящие туры</h3>
           </a>
-          <a x-on:click="modalCallback = true" class="flex flex-col justify-center cursor-pointer items-center group mr-4">
+          <a x-data @click="$store.modal.openModal()" class="flex flex-col justify-center cursor-pointer items-center group mr-4">
             <img class="w-[50px] md:w-[60px]" src="./assets/img/call.png" alt="Обратная связь" />
             <h3 class="group-hover:text-green-500 text-xl">Обратная связь</h3>
           </a>
-            <div    
-              x-show="modalCallback"           
-              x-transition:enter="transition ease-out duration-300"
-              x-transition:enter-start="opacity-0 transform scale-90"
-              x-transition:enter-end="opacity-100 transform scale-100"
-              x-transition:leave="transition ease-in duration-300"
-              x-transition:leave-start="opacity-100 transform scale-100"
-              x-transition:leave-end="opacity-0 transform scale-90"
-              class="p-2 fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center bg-black bg-opacity-75">
-              <div class="flex flex-col max-w-3xl max-h-full overflow-auto bg-orange-500 rounded-md p-2">
-                <div class="z-50">
-                  <button x-on:click="modalCallback = false" class="float-right pt-2 pr-2 outline-none focus:outline-none">
-                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 18">
-                      <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-                      </path>
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex justify-center items-center mb-4">
-                  <h2 class="text-2xl font-bold text-white">Зкаказать отратный звонок</h2>
-                </div>
-                <div class="p-2">
-                  <form action="mail.php" method="post">
-                    <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-blue-500 focus:border-blue-500 shadow-md" type="text" name="name" placeholder="Введите имя">
-                    <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-blue-500 focus:border-blue-500 shadow-md" type="tel" name="phone" placeholder="Введите телефон">
-                    <button class="px-6 self-start py-3 bg-green-500 text-white rounded-md shadow-md hover:bg-green-400">Отправть</button>
-                  </form>
-                </div>
-              </div>
-            </div>
+
           <!-- <a href="#TourSelection" class="flex flex-col justify-center items-center group">
             <img class="w-[50px] md:w-[60px]" src="./assets/img/search.png" alt="Подбор тура" />
             <h3 class="group-hover:text-blue-500 text-xl">Подбор тура</h3>
@@ -90,7 +61,7 @@
           <div class="relative z-10" data-sletat-module-id="dbf179e7-b2e9-439d-b15b-6e6771dd2bbf"></div>
         </div>
       </div>
-      <div class="custom-shape-divider-bottom-1631693646">
+      <div class="custom-shape-divider-bottom-1631693646 hidden md:block">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
@@ -109,8 +80,8 @@
         <span class="sletat-copyright">Идет загрузка модуля <a href="https://sletat.ru/" title="поиск туров" target="_blank">поиска туров</a> &hellip;</span>
       </div>
     </section>
-    <section class="subscribe h-[400px] mb-10 bg-cover">
-      <div class="custom-shape-divider-top-1631693681">
+    <section class="subscribe md:h-[400px] mb-10 bg-cover">
+      <div class="custom-shape-divider-top-1631693681 hidden md:block">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
@@ -120,27 +91,27 @@
           <h2 class="text-white font-bold text-3xl">ПОДПИСАТЬСЯ НА РАССЫЛКУ 
             <span class="text-orange-500 font-bold text-3xl block">ГОРЯЩИХ ТУРОВ</span></h2>
         </div>
-        <form action="mail.php" method="post" class="inline-flex">
-          <div class="pr-4">
-            <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-orange-500 focus:border-orange-500 shadow-md" type="text" name="name" placeholder="Введите имя">
-            <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-orange-500 focus:border-orange-500 shadow-md" type="tel" name="phone" placeholder="Введите телефон">
-            <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-orange-500 focus:border-orange-500 shadow-md" type="email" name="email" placeholder="Введите email">
-            <div class="block mt-6">
-              <label class="inline-flex justify-end items-center cursor-pointer hover:bg-green-400  shadow-md bg-green-500 text-white rounded-md px-4 py-2 mr-4" for="whatsapp">Whatsapp
+        <form action="mail.php" method="post" class="inline-flex flex-col md:flex-row w-full justify-center">
+          <div class="pr-4 flex flex-wrap md:flex-row flex-col md:space-x-2 space-y-2 md:space-y-0">
+            <input class="px-4 md:w-[30%] min-w-[170px] py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-orange-500 focus:border-orange-500 shadow-md" type="text" name="name" placeholder="Введите имя">
+            <input class="px-4 md:w-[30%] min-w-[170px] py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-orange-500 focus:border-orange-500 shadow-md" type="tel" name="phone" placeholder="Введите телефон">
+            <input class="px-4 md:w-[30%] min-w-[170px] py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-orange-500 focus:border-orange-500 shadow-md" type="email" name="email" placeholder="Введите email">
+            <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:pt-4">
+              <label class="inline-flex self-start justify-end items-center cursor-pointer hover:bg-green-400  shadow-md bg-green-500 text-white rounded-md px-4 py-2 mr-4" for="whatsapp">Whatsapp
                 <input class="ml-2 checked:bg-blue-500" type="checkbox" name="whatsapp" id="whatsapp">
               </label>
-              <label class="inline-flex justify-end items-center cursor-pointer hover:bg-blue-300 shadow-md bg-blue-400 text-white rounded-md px-4 py-2 mr-4" for="telegram">Telegram
+              <label class="inline-flex self-start justify-end items-center cursor-pointer hover:bg-blue-300 shadow-md bg-blue-400 text-white rounded-md px-4 py-2 mr-4" for="telegram">Telegram
                 <input class="ml-2 checked:bg-blue-500" type="checkbox" name="telegram" id="telegram">
               </label>
-              <label class="inline-flex justify-end items-center cursor-pointer hover:bg-orange-400 shadow-md bg-orange-500 text-white rounded-md px-4 py-2 mr-4" for="mail">Mail
+              <label class="inline-flex self-start justify-end items-center cursor-pointer hover:bg-orange-400 shadow-md bg-orange-500 text-white rounded-md px-4 py-2 mr-4" for="mail">Mail
                 <input class="ml-2 checked:bg-blue-500" type="checkbox" name="mail" id="mail">
               </label>
             </div>
           </div>
-          <button class="px-6 self-start py-3 bg-orange-500 text-white rounded-md shadow-md hover:bg-orange-400">Подписаться</button>
+          <button class="px-6 mt-2 md:mt-0 self-start py-3 bg-orange-500 text-white rounded-md shadow-md hover:bg-orange-400">Подписаться</button>
         </form>
       </div>
-      <div class="custom-shape-divider-bottom-1631693646">
+      <div class="custom-shape-divider-bottom-1631693646 hidden md:block">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
@@ -299,7 +270,7 @@
               <img class="w-[50px] md:w-[60px]" src="./assets/img/fire.png" alt="Горящий тур" />
               <h3 class="group-hover:text-orange-500 text-xl">Горящий тур</h3>
             </a>
-            <a href="#" onclick.prevent="$dispatch('modal')" class="flex flex-col justify-center items-center group mr-4">
+            <a x-data @click="$store.modal.openModal()" class="flex flex-col cursor-pointer justify-center items-center group mr-4">
               <img class="w-[50px] md:w-[60px]" src="./assets/img/call.png" alt="Обратная связь" />
               <h3 class="group-hover:text-green-500 text-xl">Обратная связь</h3>
             </a>
@@ -311,7 +282,57 @@
         </div>
       </div>
     </footer>
-    
+
+    <a href="#body" class="fixed bottom-4 right-4 z-50">
+      <img src="/assets/img/arrow.png" alt="Наверх">
+    </a>
+
+    <div x-data
+    x-show="$store.modal.modalCallback"           
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform scale-90"
+    x-transition:enter-end="opacity-100 transform scale-100"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="opacity-100 transform scale-100"
+    x-transition:leave-end="opacity-0 transform scale-90"
+    class="p-2 fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center bg-black bg-opacity-75">
+    <div class="flex flex-col max-w-3xl max-h-full overflow-auto bg-orange-500 rounded-md p-2">
+      <div class="z-50">
+        <button x-data @click="$store.modal.closeModal()" class="float-right pt-2 pr-2 outline-none focus:outline-none">
+          <svg class="fill-current text-black hover:text-white hover:rotate-180 transition-all duration-500" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 18">
+            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+            </path>
+          </svg>
+        </button>
+      </div>
+      <div class="flex justify-center items-center mb-4">
+        <h2 class="text-2xl font-bold text-white">Зкаказать отратный звонок</h2>
+      </div>
+      <div class="p-2">
+        <form action="mail.php" method="post">
+          <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-blue-500 focus:border-blue-500 shadow-md" type="text" name="name" placeholder="Введите имя">
+          <input class="px-4 py-3 rounded-md outline-none focus:outline-none border border-transparent hover:border-blue-500 focus:border-blue-500 shadow-md" type="tel" name="phone" placeholder="Введите телефон">
+          <button class="px-6 self-start py-3 bg-green-500 text-white rounded-md shadow-md hover:bg-green-400">Отправть</button>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+
+    <script>
+      document.addEventListener('alpine:init', () => {
+          Alpine.store('modal', {
+            modalCallback: false,
+
+            openModal() {
+              this.modalCallback = true
+            },
+            closeModal() {
+              this.modalCallback = false
+            }
+          })
+      })
+  </script>
 
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
   </body>
