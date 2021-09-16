@@ -95,11 +95,15 @@
   padding-left: 40px;
 }
 @media (min-width: 768px) {
-.sale {
-  background: url(../img/hot-tours.jpg) center center no-repeat;
-  background-size: cover;
-  max-width: 1920px;
+  .sale {
+    background: url(../img/hot-tours.jpg) center center no-repeat;
+    background-size: cover;
+    max-width: 1920px;
+  }
 }
+
+#msg.active {
+  transform: translateX(0)
 }
 
 @tailwind base;
