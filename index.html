@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:x-bind="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="svg/favicon.svg" />
@@ -12,11 +12,11 @@
   </head>
 
   <body id="body" class="min-h-screen mx-auto max-w-[1920px] overflow-x-hidden">
-    <div class="bg-white p-4 shadow-md w-full top-0 z-10">
+    <div class="bg-white px-4 py-2 shadow-md w-full top-0 z-10">
       <div class="flex flex-col sm:flex-row sm:flex-wrap mx-auto px-2 max-w-[1366px] justify-between">
         <div class="flex text-orange-500 text-2xl sm:w-1/2 md:w-3/12 items-center justify-between">
           <a href="/">
-            <img class="w-[75px] pr-2" src="./assets/img/logo.png" alt="Tour-tour24" />
+            <img class="w-[90px] pr-2" src="./assets/img/logo.png" alt="Tour-tour24" />
           </a>
           <div class="flex justify-start items-center">
             <span class="cursor-pointer mr-4 text-blue-600 text-4xl iconify hover:text-blue-400" data-icon="entypo-social:vk-alternitive"></span>
@@ -24,23 +24,23 @@
             <span class="cursor-pointer text-green-500 text-4xl iconify hover:text-green-400" data-icon="fa-brands:whatsapp-square"></span>
           </div>
         </div>
-        <div class="flex sm:w-1/2 md:w-4/12 py-4 text-center justify-center items-center flex-col">
-          <h2 class="flex text-2xl items-center md:mb-4">
+        <div class="flex sm:w-1/2 md:w-4/12 text-center justify-center items-center flex-col">
+          <h2 class="flex w-[300px] text-2xl items-center">
             <span class="mr-2 text-green-600 iconify" data-icon="healthicons:call-centre"></span>
-            <a class="hover:text-orange-500" href="tel:+7777777777" target="_blank">+7777777777</a>
+            <a class="hover:text-orange-500" href="tel:+79262464444" target="_blank">+7-926-246-44-44</a>
           </h2>
-          <p class="flex text-2xl items-center">
+          <p class="flex w-[300px] text-2xl items-center">
             <span class="mr-2 text-blue-600 iconify" data-icon="fluent:mail-24-filled"></span>
-            <a class="hover:text-orange-500" href="mailto:mmm@mail.ru">mmm@mail.ru</a>
+            <a class="hover:text-orange-500" href="mailto:tour-tour24@yandex.ru">tour-tour24@yandex.ru</a>
           </p>
         </div>
         <div class="flex sm:w-full md:w-5/12 justify-center md:justify-end items-center md:pr-4 text-center">
           <a href="#hotTours" class="flex flex-col justify-center items-center group mr-4">
-            <img class="w-[50px] md:w-[60px]" src="./assets/img/fire.png" alt="Горящий тур" />
+            <img class="w-[40px] md:w-[45px]" src="./assets/img/fire.png" alt="Горящий тур" />
             <h3 class="group-hover:text-orange-500 text-xl">Горящие туры</h3>
           </a>
           <a x-data @click="$store.modal.openModal()" class="flex flex-col justify-center cursor-pointer items-center group mr-4">
-            <img class="w-[50px] md:w-[60px]" src="./assets/img/call.png" alt="Обратная связь" />
+            <img class="w-[50px] md:w-[50px]" src="./assets/img/call.png" alt="Обратная связь" />
             <h3 class="group-hover:text-green-500 text-xl">Обратная связь</h3>
           </a>
 
@@ -138,18 +138,18 @@
       <div class="mx-auto max-w-[1366px]">
         <h2 class="pb-6 flex justify-center uppercase font-bold text-2xl">Наши партнеры</h2>
         <div class="mt-6 grid grid-flow-col grid-cols-2 grid-rows-6 xs:grid-cols-3 xs:grid-rows-4 sm:grid-cols-4 sm:grid-rows-3 gap-2 px-4">
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner1.png" :alt="Summar" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner2.png" :alt="Anex Tour" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner4.png" :alt="Tui" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner4.png" :alt="Tez Tour" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner5.png" :alt="Трансаэро тур" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner6.png" :alt="Библио глобус" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner7.png" :alt="Русский экспресс" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner8.png" :alt="CoralTravel" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner9.png" :alt="Natalie Tours" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner10.png" :alt="Intourist" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner11.png" :alt="Санрайз тур" />
-          <img class="w-full max-w-[200px] min-w-[140px]" src="assets/img/partner12.png" :alt="Pegas touristik" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner1.png" :alt="Summar" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner2.png" :alt="Anex Tour" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner4.png" :alt="Tui" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner4.png" :alt="Tez Tour" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner5.png" :alt="Трансаэро тур" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner6.png" :alt="Библио глобус" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner7.png" :alt="Русский экспресс" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner8.png" :alt="CoralTravel" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner9.png" :alt="Natalie Tours" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner10.png" :alt="Intourist" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner11.png" :alt="Санрайз тур" />
+          <img class="w-full max-w-[200px] min-w-[140px]" src="/assets/img/partner12.png" :alt="Pegas touristik" />
         </div>
       </div>
       <!-- <img class="w-full" src="assets/img/partner_p.png" alt="Синяя волна" /> -->
@@ -262,7 +262,7 @@
         <div class="flex flex-col sm:flex-row sm:flex-wrap mx-auto px-2 max-w-[1366px] justify-between">
           <div class="flex text-orange-500 text-2xl sm:w-1/2 md:w-3/12 items-center justify-between">
             <a href="/">
-              <img class="w-[75px] pr-2" src="./assets/img/logo.png" alt="Tour-tour24" />
+              <img class="w-[100px] pr-2" src="./assets/img/logo.png" alt="Tour-tour24" />
             </a>
             <div class="flex justify-start items-center">
               <span class="cursor-pointer mr-4 text-blue-600 text-4xl iconify hover:text-blue-400" data-icon="entypo-social:vk-alternitive"></span>
@@ -271,13 +271,13 @@
             </div>
           </div>
           <div class="flex sm:w-1/2 md:w-4/12 py-4 text-center justify-center items-center flex-col">
-            <h2 class="flex text-2xl items-center md:mb-4">
+            <h2 class="flex w-[300px] text-2xl items-center md:mb-4">
               <span class="mr-2 text-green-600 iconify" data-icon="healthicons:call-centre"></span>
-              <a class="hover:text-orange-500" href="tel:+7777777777" target="_blank">+7777777777</a>
+              <a class="hover:text-orange-500" href="tel:+79262464444" target="_blank">+7-926-246-44-44</a>
             </h2>
-            <p class="flex text-2xl items-center">
+            <p class="flex w-[300px] text-2xl items-center">
               <span class="mr-2 text-blue-600 iconify" data-icon="fluent:mail-24-filled"></span>
-              <a class="hover:text-orange-500" href="mailto:mmm@mail.ru">mmm@mail.ru</a>
+              <a class="hover:text-orange-500" href="mailto:tour-tour24@yandex.ru">tour-tour24@yandex.ru</a>
             </p>
           </div>
           <div class="flex sm:w-full md:w-5/12 justify-center md:justify-end items-center md:pr-4 text-center">

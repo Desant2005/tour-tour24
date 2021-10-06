@@ -8,7 +8,7 @@ if (isset($_POST['telegram'])) {$telegram = $_POST['telegram'];}
 if (isset($_POST['mail'])) {$mail = $_POST['mail'];}
 
 /* Сюда впишите свою эл. почту */
-$address = "arhipmen@gmail.com";
+$address = "tour-tour24@yandex.ru";
 
 /* А здесь прописывается текст сообщения, \n - перенос строки */
 $mes = "Тема: Подписка на рассылку\nИмя: $name \nТелефон: $phone" \nE-mail: $email\nWhatsapp: $whatsapp\nTelegram: $telegram\nПочта: $mail; 

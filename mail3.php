@@ -6,7 +6,7 @@ if (isset($_POST['message'])) {$message = $_POST['message'];}
 // if (isset($_POST['email'])) {$email = $_POST['email'];}
 
 /* Сюда впишите свою эл. почту */
-$address = "arhipmen@gmail.com";
+$address = "tour-tour24@yandex.ru";
 
 /* А здесь прописывается текст сообщения, \n - перенос строки */
 $mes = "Тема: Форма сертификат\nИмя: $name \nТелефон: $phone \nСообщение: $message"; //\nE-mail: $email\nСообщение: $message
